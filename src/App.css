@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #000000;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: #12121200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #2c2c2cfa;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  backdrop-filter: blur(3px); /* Applies blur effect to content behind it */
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  padding-left: 20px;
+}
+
+.logo img {
+  width: 60px;
+  height: 50px;
+  padding-right: 10px;
+}
+.links {
+  padding-right: 20px;
+}
+
+.links a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  padding-left: 15px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media only screen and (max-width: 550px) {
+  .links {
+    display: none;
+  }
+}
+
+.intro-body {
+  height: 500px;
+  background-color: #000000;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projects-body {
+  background-color: black;
+  display: flex;
+  color: white;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-holder {
+  min-height: 550px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  overflow-x: auto;
+  width: 80%;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+}
+
+.card-body {
+  min-width: 350px;
+  max-width: 350px;
+  height: 420px;
+  background-color: #121212;
+  border: 1px solid #292929;
+  border-radius: 10px;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s, background-color ease-in-out 1s;
+  scroll-snap-align: start;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-body p {
+  color: #cdcccc;
+  font-size: 20px;
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
+.card-body:hover {
+  top: -15px;
+  background-color: #131313;
+  border-color: rgb(0, 78, 60);
+}
+
+.card-controller {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  width: 90%;
+}
+.card-controller button {
+  border: none;
+  background-color: rgb(27, 27, 27);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(201deg);
+}
+
+.card-controller button:hover {
+  background-color: rgb(0, 78, 60);
+}
+.icons {
+  margin-top: 10px;
+}
+
+.icons img {
+  width: 50px;
+  height: 50px;
+}
+
+.buttons {
+  width: 165px;
+  height: 60px;
+  background-color: #151515;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 204, 255);
+  margin-top: 25px;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: rgb(0, 204, 255);
+}
+
+.buttons:hover {
+  background-color: #000000;
+}
+
+/*  EXPERIENCE  */
+
+.experience-body {
+  padding-top: 50px;
+  height: 1000px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+/*  CONTACT  */
+
+.contact-body {
+  height: 600px;
+  background-color: #181818;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.contact-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-body input,
+textarea {
+  width: 450px;
+  height: 60px;
+  border: 1px solid rgb(0, 204, 255);
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+}
+
+.contact-input input:focus,
+textarea:focus {
+  border: none;
+  border-style: none;
+}
+
+.contact-input :nth-child(3) {
+  height: 160px;
+}
+
+.contact-input textarea {
+  padding-top: 10px;
+}
+
+.contact-input button {
+  height: 60px;
+  width: 450px;
+  background-color: rgb(0, 204, 255);
+  border: none;
+  border-radius: 10px;
+}
+
+/*  FOOTER  */
+footer {
+  height: 200px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  padding-left: 10px;
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
