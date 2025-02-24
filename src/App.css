@@ -101,8 +101,8 @@ nav {
 }
 
 .card-body {
-  min-width: 350px;
-  max-width: 350px;
+  min-width: 340px;
+  max-width: 340px;
   height: 420px;
   background-color: #121212;
   border: 1px solid #292929;
@@ -116,6 +116,13 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+@media (max-width: 950px) {
+  .card-body {
+    min-width: 300px;
+    max-height: 420px;
+  }
 }
 
 .card-body p {
@@ -136,7 +143,8 @@ nav {
   justify-content: space-between;
   position: absolute;
   top: 50%;
-  width: 90%;
+  width: 95%;
+  z-index: 1;
 }
 .card-controller button {
   border: none;
@@ -192,12 +200,58 @@ button img {
 /*  EXPERIENCE  */
 
 .experience-body {
+  width: 100vw;
   padding-top: 50px;
-  height: 1000px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+.experience-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+@media (max-width: 980px) {
+  .experience-cards {
+    flex-direction: column;
+  }
+}
+
+.card {
+  width: 350px;
+  height: 450px;
+  border-radius: 20px;
+  border: 1px solid #292929;
+  background-color: #141414;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.card h2 {
+  color: #686868;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.card p {
+  font-size: large;
+}
+
+.card .footer {
+  color: rgb(0, 204, 255);
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
 }
 
 /*  CONTACT  */
@@ -214,6 +268,7 @@ button img {
 }
 
 .contact-input {
+  width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -221,9 +276,15 @@ button img {
   gap: 20px;
 }
 
+@media (max-width: 980px) {
+  .contact-input {
+    width: 100%;
+  }
+}
+
 .contact-body input,
 textarea {
-  width: 450px;
+  width: 100%;
   height: 60px;
   border: 1px solid rgb(0, 204, 255);
   border-radius: 10px;
@@ -249,10 +310,13 @@ textarea:focus {
 
 .contact-input button {
   height: 60px;
-  width: 450px;
+  width: 100%;
   background-color: rgb(0, 204, 255);
   border: none;
   border-radius: 10px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
 }
 
 /*  FOOTER  */

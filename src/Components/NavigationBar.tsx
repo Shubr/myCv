@@ -9,10 +9,10 @@ function NavigationBar() {
         <h2>SHUB</h2>
       </div>
       <div className="links">
-        <a href="#">HOME</a>
-        <a href="#">PROJECTS</a>
-        <a href="#">EXPERIENCE</a>
-        <a href="#">CONTACT</a>
+        <a href="#Intro">INTRO</a>
+        <a href="#Projects">PROJECTS</a>
+        <a href="#Experience">EXPERIENCE</a>
+        <a href="#Contact">CONTACT</a>
       </div>
     </nav>
   );

@@ -6,23 +6,23 @@ import jsicon from "../assets/js.png";
 import Highlight from "./HighlightText";
 
 function Projects() {
-  const cardHolderRef = useRef(null);
+  const cardHolderRef = useRef<HTMLDivElement | null>(null);
 
   const scrollLeft = () => {
     if (cardHolderRef.current) {
-      cardHolderRef.current.scrollLeft -= 220;
+      cardHolderRef.current.scrollLeft -= 350;
       console.log("hello");
     }
   };
 
   const scrollRight = () => {
     if (cardHolderRef.current) {
-      cardHolderRef.current.scrollLeft += 220;
+      cardHolderRef.current.scrollLeft += 350;
     }
   };
 
   return (
-    <div className="projects-body">
+    <div className="projects-body" id="Projects">
       <h1>
         Project
         <Highlight text={"s"} color={"#006BFF"} />
