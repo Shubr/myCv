@@ -9,6 +9,11 @@ function Intro() {
           Hi, I'm <Highlight text="Shub" color="#FF7792" />
         </h1>
         <p>Mobile/Web Developer</p>
+        <button className="buttons cv">
+          <a href="../src/assets/myCV.pdf" download="Shub_CV">
+            Download CV
+          </a>
+        </button>
       </div>
     </div>
   );

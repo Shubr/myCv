@@ -105,7 +105,7 @@ nav {
   max-width: 340px;
   height: 420px;
   background-color: #121212;
-  border: 2px solid #3f3f3f;
+  border: 1.5px solid #3f3f3f;
   border-radius: 10px;
   position: relative;
   top: 0;
@@ -127,9 +127,11 @@ nav {
 
 .card-body p {
   color: #b2b2b2;
-  font-size: 20px;
+  font-size: 16px;
   white-space: pre-line;
   line-height: 1.5;
+
+  min-height: 100px;
 }
 
 .card-body:hover {
@@ -190,10 +192,6 @@ button img {
   margin-top: 25px;
 }
 
-.vardevs {
-  border: 1px solid rgb(255, 145, 0);
-}
-
 .buttons a {
   text-decoration: none;
   color: rgb(0, 204, 255);
@@ -201,9 +199,6 @@ button img {
 
 .buttons:hover {
   background-color: #000000;
-}
-.vardevs a {
-  color: rgb(255, 145, 0);
 }
 
 /*  EXPERIENCE  */
@@ -342,4 +337,8 @@ footer a {
   text-decoration: none;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.cv a {
+  font-size: 20px;
 }

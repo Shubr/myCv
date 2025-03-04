@@ -77,6 +77,11 @@ function Projects() {
           <div className="icons">
             <img src={swiftIcon} />
           </div>
+          <div className="buttons">
+            <a href="https://github.com/Shubr/Sticky-Note" target="_blank">
+              View GitHub
+            </a>
+          </div>
         </Card>
       </div>
     </div>
