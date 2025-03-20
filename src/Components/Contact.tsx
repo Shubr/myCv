@@ -8,16 +8,16 @@ function Contact() {
         <Highlight text={"n"} color={"#FFB200"} />
         tact
       </h1>
-      <form>
+      <form action="https://formspree.io/f/xyzkrajl" method="POST">
         <div className="contact-input">
           <input type="text" placeholder="Name" name="name" />
-          <input type="text" placeholder="eMail" name="eMail" />
+          <input type="email" placeholder="eMail" name="eMail" />
           <textarea
             typeof="text"
             placeholder="Description"
             name="description"
           />
-          <button>Send</button>
+          <button type="submit">Send</button>
         </div>
       </form>
     </div>
