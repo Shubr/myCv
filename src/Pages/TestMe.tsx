@@ -25,12 +25,20 @@ export default function TestMe() {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
+    const reader = new FileReader();
     if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setImage(reader.result as string);
-      };
-      reader.readAsDataURL(file);
+      if (file.type === "img/png") {
+        reader.onload = () => {
+          setImage(reader.result as string);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        reader.onload = () => {
+          setImage(reader.result as string);
+          setRectangles([]);
+        };
+        reader.readAsDataURL(file);
+      }
     }
   };
 
@@ -112,7 +120,7 @@ export default function TestMe() {
             <input
               id="file-upload"
               type="file"
-              accept="image/*"
+              accept="image/*, application/pdf"
               onChange={handleChange}
             />
             <img src={uploadIcon}></img>
@@ -147,7 +155,7 @@ export default function TestMe() {
               <input
                 id="file-upload"
                 type="file"
-                accept="image/*"
+                accept="image/*, application/pdf"
                 onChange={handleChange}
               />
               <img src={uploadIcon}></img>
