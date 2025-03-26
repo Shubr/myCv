@@ -100,6 +100,10 @@ export default function TestMe() {
   return (
     <>
       <div className="testme-body">
+        <div className="title">
+          <h1>Test Your Memory</h1>
+          <p>Drag anywhere inside the image to draw</p>
+        </div>
         {!image && (
           <div
             className="uploadimage-body"
