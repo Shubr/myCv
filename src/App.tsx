@@ -1,19 +1,16 @@
-import NavigationBar from "./Components/NavigationBar";
-import Intro from "./Components/Intro";
-import Projects from "./Components/Projects";
-import Experience from "./Components/Experiences";
-import Contact from "./Components/Contact";
-import Footer from "./Components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainPage from "./Pages/MainPage";
+import TestMe from "./Pages/TestMe";
 
 function App() {
   return (
     <>
-      <NavigationBar />
-      <Intro />
-      <Projects />
-      <Experience />
-      <Contact />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage />}></Route>
+          <Route path="/TestMe" element={<TestMe />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
