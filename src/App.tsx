@@ -1,18 +1,16 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import MainPage from "./Pages/MainPage";
 import TestMe from "./Pages/TestMe";
-import { StrictMode } from "react";
+// import { StrictMode } from "react";
 
 function App() {
   return (
-    <StrictMode>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/TestMe" element={<TestMe />} />
-        </Routes>
-      </BrowserRouter>
-    </StrictMode>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<MainPage />}></Route>
+        <Route path="/TestMe" element={<TestMe />}></Route>
+      </Routes>
+    </div>
   );
 }
 
