@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../App.css";
 import logo from "../assets/logo_.png";
 
@@ -9,6 +10,7 @@ function NavigationBar() {
         <h2>SHUB</h2>
       </div>
       <div className="links">
+        <Link to="/TestMe">d</Link>
         <a href="#Intro">INTRO</a>
         <a href="#Projects">PROJECTS</a>
         <a href="#Experience">EXPERIENCE</a>
