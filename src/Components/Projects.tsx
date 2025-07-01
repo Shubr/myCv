@@ -1,11 +1,11 @@
 import Card from "./Card";
-import right_arrow from "../assets/right-arrow.svg";
-import left_arrow from "../assets/left-arrow.svg";
+import right_arrow from "/assets/right-arrow.svg";
+import left_arrow from "/assets/left-arrow.svg";
 import { useRef } from "react";
-import jsicon from "../assets/js.png";
-import reactIcon from "../assets/react.png";
-import typeIcon from "../assets/typescriptIcon.png";
-import swiftIcon from "../assets/swift.png";
+import jsicon from "/assets/js.png";
+import reactIcon from "/assets/react.png";
+import typeIcon from "/assets/typescriptIcon.png";
+import swiftIcon from "/assets/swift.png";
 
 import Highlight from "./HighlightText";
 

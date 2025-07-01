@@ -1,6 +1,6 @@
 import "./TestMe.css";
 import { useState } from "react";
-import uploadIcon from "../assets/uploadIcon.png";
+import uploadIcon from "/assets/uploadIcon.png";
 
 interface Rectangle {
   id: number;
@@ -19,7 +19,7 @@ export default function TestMe() {
   const [rectangles, setRectangles] = useState<Rectangle[]>([]);
   const [isDrawing, setIsDrawing] = useState(false);
   const [startPoint, setStartPoint] = useState<{ x: number; y: number } | null>(
-    null
+    null,
   );
   const [currentId, setCurrentId] = useState(0);
 
@@ -46,7 +46,7 @@ export default function TestMe() {
     // Set image dimensions after the image loads
     setImageDimensions({
       width: e.currentTarget.width,
-      height: e.currentTarget.height
+      height: e.currentTarget.height,
     });
   };
 
@@ -86,16 +86,16 @@ export default function TestMe() {
       y: Math.max(0, Math.min(startPoint.y, imageDimensions.height)),
       width: Math.max(
         0,
-        Math.min(x - startPoint.x, imageDimensions.width - startPoint.x)
+        Math.min(x - startPoint.x, imageDimensions.width - startPoint.x),
       ),
       height: Math.max(
         0,
-        Math.min(y - startPoint.y, imageDimensions.height - startPoint.y)
-      )
+        Math.min(y - startPoint.y, imageDimensions.height - startPoint.y),
+      ),
     };
 
     setRectangles((prev) =>
-      prev.filter((r) => r.id !== currentId).concat(newRect)
+      prev.filter((r) => r.id !== currentId).concat(newRect),
     );
   };
 
@@ -144,7 +144,7 @@ export default function TestMe() {
                   left: rect.x,
                   top: rect.y,
                   width: rect.width,
-                  height: rect.height
+                  height: rect.height,
                 }}
               />
             ))}

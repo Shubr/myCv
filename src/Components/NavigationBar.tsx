@@ -1,5 +1,5 @@
 import "../App.css";
-import logo from "../assets/logo_.png";
+import logo from "/assets/logo_.png";
 
 function NavigationBar() {
   return (
