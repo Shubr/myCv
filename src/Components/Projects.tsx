@@ -2,10 +2,12 @@ import Card from "./Card";
 import right_arrow from "/assets/right-arrow.svg";
 import left_arrow from "/assets/left-arrow.svg";
 import { useRef } from "react";
-import jsicon from "/assets/js.png";
+import jsIcon from "/assets/js.png";
 import reactIcon from "/assets/react.png";
 import typeIcon from "/assets/typescriptIcon.png";
-import swiftIcon from "/assets/swift.png";
+import csIcon from "/assets/cs.png";
+import spectreConsoleIcon from '/assets/spectre-console.png';
+import flutterIcon from '/assets/flutter.png';
 
 import Highlight from "./HighlightText";
 
@@ -45,7 +47,7 @@ function Projects() {
           detail="Easy highlighting tool high, highlight text on any website - Google Extension"
         >
           <div className="icons">
-            <img src={jsicon} />
+            <img src={jsIcon} />
           </div>
           <div className="buttons">
             <a
@@ -71,14 +73,28 @@ function Projects() {
           </div>
         </Card>
         <Card
-          name={"Stickyfi "}
-          detail="Currently I am working a macOs app, Stickyfi just a normal scikty note app with spincle of Shub"
+          name={"UIBasedTextGame"}
+          detail="Currently I am working on a Text based terminal game Spectre Console Library in C#."
         >
           <div className="icons">
-            <img src={swiftIcon} />
+            <img src={csIcon} />
+            <img src={spectreConsoleIcon}/>
           </div>
           <div className="buttons">
-            <a href="https://github.com/Shubr/Sticky-Note" target="_blank">
+            <a href="https://github.com/Shubr/Terminalify.git" target="_blank">
+              View GitHub
+            </a>
+          </div>
+        </Card>
+        <Card
+          name={"zScanner"}
+          detail="Currently working on a Flutter App that can scan food items and add it to your lists. This is just a test project using new API and android functionality"
+        >
+          <div className="icons">
+            <img src={flutterIcon}/>
+          </div>
+          <div className="buttons">
+            <a href="https://github.com/Shubr/zScanner.git" target="_blank">
               View GitHub
             </a>
           </div>
