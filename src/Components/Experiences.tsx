@@ -15,7 +15,7 @@ function Experience() {
           I started my journey as a tech student in 2022 at UCOL, where I had to
           adapt to a new environment. With minimal knowledge in tech, I knew I
           had to change, so I started grinding C# at home to impress my peers.
-          <br /> Outcome: Certificate acquired, peers impressed, parents...
+          Outcome: Certificate acquired, peers impressed, parents...
           still disappointed I didn’t become a doctor.
           <div className="footer">
             <p>February 2022 - June 2022</p>
@@ -28,8 +28,7 @@ function Experience() {
           tackling more complex projects and deepening my understanding of
           software development. I honed problem-solving skills and collaborated
           with peers on real-world applications, solidifying my passion for the
-          industry.
-          <br /> Outcome: Diploma earned, technical skills strengthened, and
+          industry. Outcome: Diploma earned, technical skills strengthened, and
           confidence built for the next challenge.
           <div className="footer">
             <p>July 2022 - June 2023</p>
@@ -50,8 +49,13 @@ function Experience() {
         </div>
         <div className="card">
           <h1>Internship</h1>
-          <h2>Nodero</h2>
-
+          <h2>Nodero Palmerston North</h2>
+          Contributed to automation and backend development projects within a professional 
+          software team. Key achievements include fixing Azure 
+          Function-based timesheet automation, building Power Automate workflows, 
+          and integrating JIRA and Xero APIs for invoice generation. Also assisted 
+          with backend development in TypeScript and tested new internal tools prior 
+          to deployment.
           <div className="footer">
             <p>Feb 2025 - June 2025</p>
           </div>
