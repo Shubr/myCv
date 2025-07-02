@@ -45,7 +45,15 @@ function Experience() {
           skills by working on real-world projects and staying updated with
           industry trends.
           <div className="footer">
-            <p>July 2023 - Current</p>
+            <p>July 2023 - June 2025</p>
+          </div>
+        </div>
+        <div className="card">
+          <h1>Internship</h1>
+          <h2>Nodero</h2>
+
+          <div className="footer">
+            <p>Feb 2025 - June 2025</p>
           </div>
         </div>
       </div>
