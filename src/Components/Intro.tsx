@@ -10,7 +10,7 @@ function Intro() {
         </h1>
         <p>Mobile/Web Developer</p>
         <button className="buttons cv">
-          <a href="../src/assets/myCV.pdf" download="Shub_CV">
+          <a href="../src/assets/myCV.pdf" download="Shub_CV.pdf">
             Download CV
           </a>
         </button>
