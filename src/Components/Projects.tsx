@@ -5,8 +5,8 @@ import { useRef } from "react";
 import jsIcon from "/assets/js.png";
 import reactIcon from "/assets/react.png";
 import typeIcon from "/assets/typescriptIcon.png";
-import csIcon from "/assets/cs.png";
-import spectreConsoleIcon from '/assets/spectre-console.png';
+// import csIcon from "/assets/cs.png";
+// import spectreConsoleIcon from '/assets/spectre-console.png';
 import flutterIcon from '/assets/flutter.png';
 
 import Highlight from "./HighlightText";
@@ -72,20 +72,7 @@ function Projects() {
             </a>
           </div>
         </Card>
-        <Card
-          name={"UIBasedTextGame"}
-          detail="Currently I am working on a Text based terminal game Spectre Console Library in C#."
-        >
-          <div className="icons">
-            <img src={csIcon} />
-            <img src={spectreConsoleIcon}/>
-          </div>
-          <div className="buttons">
-            <a href="https://github.com/Shubr/Terminalify.git" target="_blank">
-              View GitHub
-            </a>
-          </div>
-        </Card>
+        
         <Card
           name={"zScanner"}
           detail="Currently working on a Flutter App that can scan food items and add it to your lists. This is just a test project using new API and android functionality"
