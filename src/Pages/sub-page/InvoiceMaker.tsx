@@ -106,13 +106,13 @@ function clearBorder(){
     
 }
 
-function calRate(){
-    const quntatiy = document.getElementById("qty") as HTMLInputElement;
-    const uPrice = document.getElementById("u-price") as HTMLInputElement;
+// function calRate(){
+//     const quntatiy = document.getElementById("qty") as HTMLInputElement;
+//     const uPrice = document.getElementById("u-price") as HTMLInputElement;
 
-    uPrice.addEventListener('input',()=>{
-        if(uPrice.value.trim() !== ''){
-            console.log("fill");
-        }
-    })
-}
+//     uPrice.addEventListener('input',()=>{
+//         if(uPrice.value.trim() !== ''){
+//             console.log("fill");
+//         }
+//     })
+// }
