@@ -6,7 +6,7 @@ export function NavigationBar(){
         <nav>
             <a className='new-logo' href='/games'>
             <img src={logo}></img>
-            <p>HUB GAMES</p>
+            <p>SHUB GAMES</p>
             </a>
         </nav>
     )

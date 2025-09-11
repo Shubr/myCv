@@ -23,7 +23,7 @@ export default function FoodPriceGuess(){
     
 
     function guessPrice(guessPrice: number) {
-    if (guessPrice !== todayPrice && tries != 0) {
+    if (guessPrice !== todayPrice && tries > 0) {
         const guess_box = document.createElement('div');
         const heading = document.createElement('h1');
         const paragraph = document.createElement('p');
@@ -48,7 +48,7 @@ export default function FoodPriceGuess(){
         guess_box.appendChild(heading);
         guess_box.appendChild(paragraph);
         setTries(tries-1);
-    }else if(tries != 0 && guessPrice == todayPrice){
+    }else if(tries > 0 && guessPrice == todayPrice){
         const guess_box = document.createElement('div');
         const heading = document.createElement('h1');
         const paragraph = document.createElement('p');
@@ -60,6 +60,20 @@ export default function FoodPriceGuess(){
         guess_box.appendChild(heading);
         guess_box.appendChild(paragraph);
         setTries(0);
+    }
+    else{
+        if(tries >= 0){
+        const guess_box = document.createElement('div');
+        const heading = document.createElement('h1');
+        const paragraph = document.createElement('p');
+        heading.textContent = `$${todayPrice}`
+        paragraph.textContent = `Sorry Try Again Tomorrow`;
+        guess_box.classList.add('guess-box', 'lost')
+        obj.appendChild(guess_box);
+        guess_box.appendChild(heading);
+        guess_box.appendChild(paragraph);
+        }
+        setTries(tries-1)
     }
 }
 
