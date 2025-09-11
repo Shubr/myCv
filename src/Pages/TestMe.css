@@ -40,6 +40,9 @@
     width: 80px;
     height: 80px;
   }
+  input{
+    display:none;
+  }
 }
 .uploadimage-body:hover {
   background-color: rgba(187, 124, 255, 0.241);
