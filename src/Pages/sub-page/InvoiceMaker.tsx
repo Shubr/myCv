@@ -12,6 +12,7 @@ export default function MakeInvoice(){
     }
     return(
         <>
+        <title>Invoice Creator</title>
             <div className="invoice-container">
                 <div className="title">
                     <h1>Create Invoice</h1>
