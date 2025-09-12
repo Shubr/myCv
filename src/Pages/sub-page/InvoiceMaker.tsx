@@ -3,7 +3,10 @@ import addIcon from '/assets/icons/addIcon.svg';
 import refreshIcon from '/assets/icons/refreshIcon.svg';
 import {usePDF} from 'react-to-pdf';
 
+let subTotal = 0;
+
 export default function MakeInvoice(){
+
     const {toPDF, targetRef}= usePDF({filename:'invoice.pdf'});
 
     function exportInvoice(){
@@ -59,7 +62,7 @@ export default function MakeInvoice(){
                             </div>
                         </div>
                         <br/><br/>
-                        <div className="work-info">
+                        <div id="work-info">
                             <div className="headings">
                                 <h2>Description</h2>
                                 <h2>Qty</h2>
@@ -67,19 +70,43 @@ export default function MakeInvoice(){
                                 <h2>Total(excl. GST)</h2>
                             </div>
                             <hr/>
-                            <div className="items">
-                                <input placeholder="Hours Worked"/>
-                                <input placeholder="9.0" id="qty"/>
-                                <input placeholder="45.00" id="u-price"/>
-                                <p>$</p>
+                            <div id="item-container">
+                                <div className="items">
+                                <input placeholder="Hours Worked" id="description"/>
+                                <input placeholder="9.0" id="qty" name="qty"/>
+                                <input placeholder="45.00" id="unit-price"/>
+                                <p id="total-price">$</p>
                             </div>
-                        <button><img src={addIcon}/></button>
+                            </div>
+                        <button id="add-item" onClick={()=>{
+                            addItem()
+                        }}><img src={addIcon}/></button>
                         </div>
                         <hr/>
                         <div className="footer-info">
                                 <h4>Subtotal (excl GST)</h4>
-                                <p>$405.00</p>
+                                <p id="sub-total">${subTotal}</p>
                         </div>
+                        <hr/>
+                        <div className="bottom-container">
+                            <div className="bank-details">
+                                <br/>
+                                <h2>Please make payment to</h2>
+                                <div>
+                                    <p>Account Name:</p>
+                                    <input/>
+                                </div>
+                                <div>
+                                    <p>Account Number:</p>
+                                    <input/>
+                                </div>
+                                <div>
+                                    <p>When paying, please use the reference: </p>
+                                    <input/>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                     </div>
 
@@ -100,19 +127,57 @@ export default function MakeInvoice(){
 
 function clearBorder(){
     const borderedElement = document.getElementsByTagName("input");
-    for(let i = 0; i<=borderedElement.length; i++){
+    const addItemButton = document.getElementById("add-item");
+    const description = document.getElementById("description") as HTMLInputElement;
+    const qty = document.getElementById("qty") as HTMLInputElement;
+    const uPrice = document.getElementById("unit-price") as HTMLInputElement;
+    const totalPrice = document.getElementById("total-price") as HTMLElement;
+
+    for(let i = 0; i<=borderedElement.length-1; i++){
         borderedElement[i].style.border = "none";
     }
-    
+    if (addItemButton) {
+        addItemButton.style.display = "none";
+    }
+    description.style.display = "none";
+    qty.style.display= "none";
+    uPrice.style.display = "none";
+    totalPrice.style.display = "none";
 }
 
-// function calRate(){
-//     const quntatiy = document.getElementById("qty") as HTMLInputElement;
-//     const uPrice = document.getElementById("u-price") as HTMLInputElement;
+function addItem(){
+    const itemContainer = document.getElementById("item-container") as HTMLElement;
+    const description = document.getElementById("description") as HTMLInputElement;
+    const qty = document.getElementById("qty") as HTMLInputElement;
+    const uPrice = document.getElementById("unit-price") as HTMLInputElement;
 
-//     uPrice.addEventListener('input',()=>{
-//         if(uPrice.value.trim() !== ''){
-//             console.log("fill");
-//         }
-//     })
-// }
+    const items =  document.createElement("div");
+    items.className = "items";
+
+    const descrip_p = document.createElement("p");
+    // descrip_p.id = "description"
+    descrip_p.textContent = description.value;
+
+    const qty_p = document.createElement("p");
+    // qty_p.id = "qty";
+    qty_p.textContent = qty.value;
+
+    const unitPrice_p = document.createElement("p");
+    // unitPrice_p.id = "unit-price"
+    unitPrice_p.textContent = uPrice.value;
+
+    const total = document.createElement("p");
+    total.textContent = ("$"+parseInt(qty.value)*parseInt(uPrice.value)).toString();
+
+
+    items.appendChild(descrip_p);
+    items.appendChild(qty_p);
+    items.appendChild(unitPrice_p);
+    items.appendChild(total);
+    itemContainer.prepend(items);
+    
+    subTotal += parseInt(qty.value) * parseInt(uPrice.value)
+
+    const subTotals = document.getElementById("sub-total") as HTMLElement;
+    subTotals.textContent = `$${subTotal}`;
+}
