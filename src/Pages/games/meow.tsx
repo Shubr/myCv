@@ -14,6 +14,7 @@ export default function Meow(){
             const json = await getCat()
             const data: CatList = json
             const urls = data.map(cats=>cats.url)
+            preloadImage(urls)
             if(container){
                 // container.addEventListener("click", )
                 container.addEventListener("click", (e)=>{
@@ -55,4 +56,11 @@ function addCat(x:String, y:String, img: string){
         main_container.appendChild(text)
     }
 
+}
+
+function preloadImage(urls:string[]){
+    urls.forEach(url=>{
+        const img = new Image();
+        img.src = url
+    })
 }
