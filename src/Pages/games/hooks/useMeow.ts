@@ -14,7 +14,6 @@ export default async function getCat(): Promise<[]>{
 
     header.set("Content-Type", "application/json")
     header.set("Accept", "application/json")
-    header.set("x-api-key", "live_Y9nQUqyVdGFi5TAaGeguzfuyoNSP2MH8yLQHz4D4WFw9P1SUJnVD2JgKlnY3ANBh")
 
     const request: RequestInfo = new Request('https://api.thecatapi.com/v1/images/search?limit=10',{
         method: 'GET',
