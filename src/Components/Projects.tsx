@@ -3,11 +3,12 @@ import right_arrow from "/assets/right-arrow.svg";
 import left_arrow from "/assets/left-arrow.svg";
 import { useRef } from "react";
 import jsIcon from "/assets/js.png";
-import reactIcon from "/assets/react.png";
-import typeIcon from "/assets/typescriptIcon.png";
-// import csIcon from "/assets/cs.png";
-// import spectreConsoleIcon from '/assets/spectre-console.png';
+import cppIcon from "/assets/cpp.png";
 import flutterIcon from '/assets/flutter.png';
+import kotlinIcon from '/assets/kotlin.png';
+import jetpackCIcon from '/assets/jetpackcompose.png';
+import firebaseIcon from '/assets/firebase.png'; 
+
 
 import Highlight from "./HighlightText";
 
@@ -42,6 +43,34 @@ function Projects() {
         </button>
       </div>
       <div className="card-holder" ref={cardHolderRef}>
+        <Card 
+            name="iNutrition"
+            detail="A health-tracking mobile app that helps users log meals, track calories, and follow personalised nutrition goal,
+            with secure accounts and real-time data powered by Firebase"
+          >
+            <div className="icons">
+              <img src={flutterIcon}/>
+              <img src={firebaseIcon}/>
+            </div>
+            <div className="buttons">
+              <a href="https://github.com/Shubr/iNutrition.git" target="_blank">View Repo</a>
+            </div>
+          </Card>
+
+        <Card 
+            name="TuckBox"
+            detail="A mobile food ordering app built with Android JetPack Compose and Firebase, that lets users 
+            place and scedule takeaway orders in real time, with secure login, order tracking and automatic receipt storage."
+          >
+            <div className="icons">
+              <img src={kotlinIcon}/>
+              <img src={jetpackCIcon}/>
+              <img src={firebaseIcon}/>
+            </div>
+            <div className="buttons">
+              <a href="https://github.com/Shubr/TruckBox.git" target="_blank">View Repo</a>
+            </div>
+          </Card>
         <Card
           name="HighLight"
           detail="Easy highlighting tool high, highlight text on any website - Google Extension"
@@ -59,33 +88,32 @@ function Projects() {
           </div>
         </Card>
         <Card
-          name={"VarDevs"}
-          detail="I created the font-end for VarDevs, making responsive Ui/Ux"
-        >
-          <div className="icons">
-            <img src={reactIcon} />
-            <img src={typeIcon} />
-          </div>
-          <div className="buttons vardevs">
-            <a href="https://www.vardevs.com" target="_blank">
-              View Site
-            </a>
-          </div>
-        </Card>
-        
-        <Card
-          name={"zScanner"}
-          detail="Currently working on a Flutter App that can scan food items and add it to your lists. This is just a test project using new API and android functionality"
-        >
-          <div className="icons">
-            <img src={flutterIcon}/>
-          </div>
-          <div className="buttons">
-            <a href="https://github.com/Shubr/zScanner.git" target="_blank">
-              View GitHub
-            </a>
-          </div>
-        </Card>
+          name="RedditPro"
+          detail="A reddit wrapper app that minimises app usage and distractions, only showing you want you want to see.">
+            <div className="icons">
+              <img src={flutterIcon}></img>
+            </div>
+            <div className="buttons">
+              <a href="https://github.com/Shubr/ProductiveReddit.git"
+              target="_blank">
+                View Repo
+              </a>
+            </div>
+          </Card>
+          
+          <Card
+            name="Alpha - Current"
+            detail="A NDs Emulator for Android, enspired by Delta."
+          >
+            <div className="icons">
+              <img src={cppIcon}/>
+            </div>
+            <div className="buttons">
+              <a href="https://github.com/Shubr/Alpha" target="_blank">
+                View Repo
+              </a>
+            </div>
+          </Card>
       </div>
     </div>
   );
