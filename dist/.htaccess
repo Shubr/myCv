@@ -1,0 +1,21 @@
+#     # Options -MultiViews
+#     # RewriteEngine On
+#     # RewriteCond %{REQUEST_FILENAME} !-f
+#     # RewriteRule ^ index.html [QSA,L]
+    
+# # public_html/dist/.htaccess
+
+# Options -MultiViews
+# RewriteEngine On
+
+# # Condition: If the file requested (within the dist directory) does NOT exist
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^ index.html [QSA,L]
+
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
