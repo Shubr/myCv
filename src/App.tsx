@@ -3,6 +3,8 @@ import MainPage from "./Pages/MainPage";
 import TestMe from "./Pages/TestMe";
 import SGames from "./Pages/Games";
 import FoodPriceGuess from "./Pages/sub-page/FoodPriceGuess";
+import MakeInvoice from "./Pages/sub-page/InvoiceMaker";
+import Meow from "./Pages/games/meow";
 // import { StrictMode } from "react";
 
 function App() {
@@ -12,7 +14,9 @@ function App() {
         <Route path="/" element={<MainPage />}></Route>
         <Route path="/TestMe" element={<TestMe />}></Route>
         <Route path="/Games"  element={<SGames />}></Route>
-        <Route path="/FoodGuess" element={<FoodPriceGuess/>}></Route>
+        <Route path="/Pricedle" element={<FoodPriceGuess/>}></Route>
+        <Route path="/MakeInvoice" element={<MakeInvoice/>}/>
+        <Route path="/Meow" element={<Meow/>}/>
       </Routes>
     </div>
   );

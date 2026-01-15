@@ -80,6 +80,7 @@ export default function FoodPriceGuess(){
     const [guess, setGuess] = useState('')
     return(
         <>
+            <title>Pricedle</title>
             <div className='main'>
                 <div className='title'>
                     <h1>Food<span>le</span></h1>
